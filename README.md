@@ -45,34 +45,89 @@ Feel free to reach out to me! 😊 <br />
 </p>
 </details>
 
+-->
+
 ---
 
 ###### 1. What's the output?
 
-```javascript
-function sayHi() {
-  console.log(name);
-  console.log(age);
-  var name = 'Lydia';
-  let age = 21;
-}
+```
+a = int(1.4e2)
+b = int("1.4e2")
+c = int(3.9)
+d = int(True)
 
-sayHi();
+print(a)
+print(b)
+print(c)
+print(d)
 ```
 
-- A: `Lydia` and `undefined`
-- B: `Lydia` and `ReferenceError`
-- C: `ReferenceError` and `21`
-- D: `undefined` and `ReferenceError`
-
+- A: ```error
+        error
+        3
+        1
+      ```
+- B: ```140
+        error
+        3
+        1
+      ```
+- C: ```140
+        140
+        3
+        1
+      ```
+     
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: D
+#### Answer: B
 
-Within the function, we first declare the `name` variable with the `var` keyword. This means that the variable gets hoisted (memory space is set up during the creation phase) with the default value of `undefined`, until we actually get to the line where we define the variable. We haven't defined the variable yet on the line where we try to log the `name` variable, so it still holds the value of `undefined`.
+int() argument must be a string (like "1" or "2.4" etc), a bytes-like object or a number
 
-Variables with the `let` keyword (and `const`) are hoisted, but unlike `var`, don't get <i>initialized</i>. They are not accessible before the line we declare (initialize) them. This is called the "temporal dead zone". When we try to access the variables before they are declared, JavaScript throws a `ReferenceError`.
+</p>
+</details>
+
+---
+
+###### 2. What's the output?
+
+```
+a = int("hello")
+b = int(True)
+c = int(3.9)
+
+print(a)
+print(b)
+print(c)
+```
+
+- A: ```
+        error
+        1
+        3
+      ```
+- B: ```
+        1
+        1
+        4
+      ```
+- C: ```
+        1
+        error
+        3
+      ```
+- D: ```1
+        error 
+        4
+      ```      
+<details><summary><b>Answer</b></summary>
+<p>
+
+#### Answer: A
+
+int() argument must be a string (like "1" or "2.4" etc), a bytes-like object or a number
 
 </p>
 </details>
@@ -80,4 +135,5 @@ Variables with the `let` keyword (and `const`) are hoisted, but unlike `var`, do
 ---
 
 
--->
+
+
