@@ -63,21 +63,24 @@ print(c)
 print(d)
 ```
 
-- A: ```error
-        error
-        3
-        1
-      ```
-- B: ```140
-        error
-        3
-        1
-      ```
-- C: ```140
-        140
-        3
-        1
-      ```
+- A: 
+```error
+   error
+   3
+   1
+```
+- B: 
+```140
+   error
+   3
+   1
+```
+- C: 
+```140
+   140
+   3
+   1
+```
      
 <details><summary><b>Answer</b></summary>
 <p>
@@ -97,6 +100,7 @@ int() argument must be a string (like "1" or "2.4" etc), a bytes-like object or 
 a = int("hello")
 b = int(True)
 c = int(3.9)
+d = int("3.9")
 
 print(a)
 print(b)
@@ -107,20 +111,24 @@ print(c)
         error
         1
         3
+        error
       ```
 - B: ```
         1
         1
         4
+        3
       ```
 - C: ```
         1
         error
         3
+        3.9
       ```
 - D: ```1
         error 
         4
+        error
       ```      
 <details><summary><b>Answer</b></summary>
 <p>
